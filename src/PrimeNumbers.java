@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PrimeNumbers {
 
-    private Set<Palondrom> palindromes = new HashSet<>();
+    private TreeSet<Palondrom> palindromes = new TreeSet<>();
 
     private List<Integer> findPrime() {
         int i = 0;
@@ -33,16 +33,15 @@ public class PrimeNumbers {
                 palindromeSearch(arg1, arg2);
             }
         }
-        for (Iterator<Palondrom> it = palindromes.iterator(); it.hasNext(); ) {
-            System.out.println(it.next());
-        }
+        System.out.println("The biggest palindrom is: " + palindromes.last().palindr);
+        System.out.println("First prime is: " + palindromes.last().firstPrime);
+        System.out.println("Second prime is: " + palindromes.last().secondPrine);
     }
     private void palindromeSearch(int firstPrime, int secondPrine) {
         long palindr = firstPrime * secondPrine;
         String strResult = String.valueOf(palindr);
         if (strResult.equals(new StringBuilder(strResult).reverse().toString())) {
             palindromes.add(new Palondrom(palindr, firstPrime, secondPrine));
-            System.out.println("Palindrom detected !");
         }
     }
 }

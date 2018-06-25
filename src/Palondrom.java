@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Palondrom {
+public class Palondrom implements Comparable<Palondrom>{
     Long palindr;
     int firstPrime;
     int secondPrine;
@@ -58,5 +58,16 @@ public class Palondrom {
                 ", firstPrime=" + firstPrime +
                 ", secondPrine=" + secondPrine +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Palondrom o) {
+        if (this.palindr > o.getPalindr()) {
+            return 1;
+        } else if (this.palindr < o.getPalindr()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

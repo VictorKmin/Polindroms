@@ -1,11 +1,11 @@
 import java.util.Objects;
 
 public class Palondrom implements Comparable<Palondrom>{
-    Long palindr;
-    int firstPrime;
-    int secondPrine;
+    long palindr;
+    long firstPrime;
+    long secondPrine;
 
-    public Palondrom(Long palindr, int firstPrime, int secondPrine) {
+    public Palondrom(long palindr, long firstPrime, long secondPrine) {
         this.palindr = palindr;
         this.firstPrime = firstPrime;
         this.secondPrine = secondPrine;
@@ -15,23 +15,23 @@ public class Palondrom implements Comparable<Palondrom>{
         return palindr;
     }
 
-    public void setPalindr(Long palindr) {
+    public void setPalindr(long palindr) {
         this.palindr = palindr;
     }
 
-    public int getFirstPrime() {
+    public long getFirstPrime() {
         return firstPrime;
     }
 
-    public void setFirstPrime(int firstPrime) {
+    public void setFirstPrime(long firstPrime) {
         this.firstPrime = firstPrime;
     }
 
-    public int getSecondPrine() {
+    public long getSecondPrine() {
         return secondPrine;
     }
 
-    public void setSecondPrine(int secondPrine) {
+    public void setSecondPrine(long secondPrine) {
         this.secondPrine = secondPrine;
     }
 
